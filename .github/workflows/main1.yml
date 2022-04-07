@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       name_main:
-        description: 'name'     
+        description: 'name_main'     
         required: true
         default: 'Law'  
 jobs:
@@ -14,4 +14,4 @@ jobs:
       - uses: actions/checkout@v1
       - uses: ./action-a
         with:
-          MY_NAME: ${{ github.event.inputs.name }} 
+          MY_NAME: ${{ github.event.inputs.name_main }} 
